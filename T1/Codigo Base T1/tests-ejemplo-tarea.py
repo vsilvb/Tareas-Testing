@@ -1,6 +1,6 @@
 import unittest
 from model import *
-from parser import *
+from parser import parser, splitArgs
 from metrics import *
 
 
