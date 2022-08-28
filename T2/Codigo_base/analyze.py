@@ -9,7 +9,7 @@ from rules.suspicious_name import *
 from rules.data_class import *
 from rules.nerver_readed import *
 
-path = "Codigo_base/input-code/"
+path = "input-code/"
 dir_list = os.listdir(path)
  
 print("Analyzing files in '", path, "' :")
