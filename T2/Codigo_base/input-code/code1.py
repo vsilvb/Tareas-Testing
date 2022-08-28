@@ -3,9 +3,17 @@ class Person:
     def __init__(self, firstName, lastName):
         self.firstName = firstName
         self.lastName = lastName
+        self.b = 5
+        self.a = 'hey'
 
     def fullName(self):
-        return self.firstName + self.lastName
+        a = 2
+        b = 3
+        c = 6
+        d = 7
+        e = 8
+        f = d + e
+        return 2 + 6 + self.b + c + a
 
     def doit(self):
         eval("2+2")
@@ -13,5 +21,4 @@ class Person:
     def somethig(self):
         if True:
             print("something")
-
 

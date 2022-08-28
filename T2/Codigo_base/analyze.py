@@ -5,8 +5,11 @@ from rules.eval_used import *
 from rules.uncouple_method import *
 from rules.dummy_if import *
 from rules.uninitialized_attribute import *
+from rules.suspicious_name import *
+from rules.data_class import *
+from rules.nerver_readed import *
 
-path = "input-code/"
+path = "Codigo_base/input-code/"
 dir_list = os.listdir(path)
  
 print("Analyzing files in '", path, "' :")
