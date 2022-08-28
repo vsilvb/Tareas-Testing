@@ -22,6 +22,7 @@ class UsedVariableVisitor(NodeVisitor):
         if isinstance(node.right, Name):
             if node.right.id not in self.used:
                 self.used.append(node.right.id)
+        NodeVisitor.generic_visit(self, node)
 
 
 class MethodVisitor(WarningNodeVisitor):
@@ -31,8 +32,6 @@ class MethodVisitor(WarningNodeVisitor):
         visitor_used.visit(node)
         visitor_assign = AssignVariableVisitor()
         visitor_assign.visit(node)
-        print(visitor_assign.assign)
-        print(visitor_used.used)
         for i in visitor_assign.assign:
             if i not in visitor_used.used:
                 self.addWarning('NeverReadedVariableWarning', node.lineno, 'variable ' + i + ' isn\'t used in method ' + node.name )
