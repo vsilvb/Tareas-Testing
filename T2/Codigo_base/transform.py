@@ -3,6 +3,8 @@ import os
 from rewriter.rewriter import *
 from rewriter.eval_rewriter import *
 from rewriter.if_true_rewriter import *
+#from rewriter.if_without_else_rewriter import *
+#from rewriter.plus_rewriter import *
 
 path = "input-code/"
 dir_list = os.listdir(path)
