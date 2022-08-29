@@ -12,7 +12,7 @@ class Person:
         c = 6
         d = 7
         a += b
-        a -= b
+        a = a - b
         e = 8
         f = d + e
         a = a + b
