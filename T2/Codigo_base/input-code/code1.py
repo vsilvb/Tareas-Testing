@@ -11,6 +11,8 @@ class Person:
         b = 3
         c = 6
         d = 7
+        a += b
+        a -= b
         e = 8
         f = d + e
         a = a + b

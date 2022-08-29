@@ -11,9 +11,11 @@ class Person:
         b = 3
         c = 6
         d = 7
+        a += b
+        a -= b
         e = 8
         f = d + e
-        a = a + b
+        a += b
         return 2 + 6 + self.b + c + a
 
     def doit(self):
