@@ -1,7 +1,7 @@
 from . rewriter import *
 
 
-class LiteralEvalTransformer(NodeTransformer):
+class PlusPlusTransformer(NodeTransformer):
     def visit_Call(self, node):
         if node.func.id == 'eval':
             return Call(func=Name(id='literal_eval', ctx=Load()), 
@@ -11,7 +11,7 @@ class LiteralEvalTransformer(NodeTransformer):
             return node
 
 
-class LiteralEvalRewriterCommand(RewriterCommand):
+class PlusPlusRewriterCommand(RewriterCommand):
     def apply(self, ast):
-        new_tree = fix_missing_locations(LiteralEvalTransformer().visit(ast))
+        new_tree = fix_missing_locations(PlusPlusTransformer().visit(ast))
         return new_tree

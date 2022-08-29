@@ -13,6 +13,7 @@ class Person:
         d = 7
         e = 8
         f = d + e
+        a = a + b
         return 2 + 6 + self.b + c + a
 
     def doit(self):

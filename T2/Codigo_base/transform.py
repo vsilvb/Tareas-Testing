@@ -16,6 +16,7 @@ for file in dir_list:
     print(" ==== " + file + " ==== ")
     fileContent = open(path+file).read()
     tree = parse(fileContent)
+    print(dump(tree))
     # we apply all rewriters in the file
     for commandClass in RewriterCommand.__subclasses__():    
         command = commandClass()
