@@ -20,6 +20,12 @@ class Person:
 
     def doit(self):
         literal_eval('2+2')
+        if self.b > 5:
+            print('mayor a 5')
+            if self.a == '4':
+                print('probando')
+        elif self.b == 5:
+            pass
 
     def somethig(self):
         print('something')

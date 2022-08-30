@@ -20,8 +20,25 @@ class Person:
 
     def doit(self):
         eval("2+2")
+        if self.b > 5:
+            print('mayor a 5')
+
+            if self.a == '4':
+                print('probando')
+
+            else:
+                pass
+
+        elif self.b == 5:
+            pass
+
+        else:
+            
+            pass
 
     def somethig(self):
         if True:
             print("something")
+        else: 
+            pass
 
