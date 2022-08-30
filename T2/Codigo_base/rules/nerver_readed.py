@@ -2,9 +2,8 @@ from .rule import *
 
 class AssignVariableVisitor(NodeVisitor):
     def __init__(self):
+        super().__init__()
         self.assign = []
-        self.used = []
-        self.unused =[]
 
     def visit_Assign(self, node: Assign):
         if isinstance(node.targets[0], Name):
@@ -13,6 +12,7 @@ class AssignVariableVisitor(NodeVisitor):
 
 class UsedVariableVisitor(NodeVisitor):
     def __init__(self):
+        super().__init__()
         self.used =[]
 
     def visit_BinOp(self, node: BinOp):
