@@ -39,7 +39,7 @@ class DataClassVisitor(WarningNodeVisitor):
         visitor = FunctionCounterVisitor()
         visitor.visit(node)
         if visitor.conclusion():
-            self.addWarning('DataClassWarning', node.lineno, 'data class '+ node.name + ' has no methods')
+            self.addWarning('DataClassWarning', node.lineno, ' class '+ node.name + ' only stores information')
         NodeVisitor.generic_visit(self, node)
 
 

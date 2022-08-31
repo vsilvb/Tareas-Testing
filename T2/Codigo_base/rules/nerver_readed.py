@@ -24,6 +24,11 @@ class UsedVariableVisitor(NodeVisitor):
                 self.used.append(node.right.id)
         NodeVisitor.generic_visit(self, node)
 
+    def visit_Return(self, node: Return):
+        if isinstance(node.value, Name):
+            if node.value.id not in self.used:
+                self.used.append(node.value.id)
+        NodeVisitor.generic_visit(self, node)
 
 class MethodVisitor(WarningNodeVisitor):
     

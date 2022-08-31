@@ -1,10 +1,10 @@
 from ast import *
 import os
 from rules.rule import *
-from rules.eval_used import *
-from rules.uncouple_method import *
-from rules.dummy_if import *
-from rules.uninitialized_attribute import *
+# from rules.eval_used import *
+# from rules.uncouple_method import *
+# from rules.dummy_if import *
+# from rules.uninitialized_attribute import *
 from rules.suspicious_name import *
 from rules.data_class import *
 from rules.nerver_readed import *

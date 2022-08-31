@@ -16,15 +16,19 @@ class Person:
         e = 8
         f = d + e
         a = a + b
+        if a > 0:
+            a = b + 3
+        else:
+            pass
         return 2 + 6 + self.b + c + a
 
     def doit(self):
-        eval("2+2")
+
         if self.b > 5:
-            print('mayor a 5')
+            print('B es mayor a 5')
 
             if self.a == '4':
-                print('probando')
+                print('A es 4')
 
             else:
                 pass
