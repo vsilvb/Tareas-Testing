@@ -1,8 +1,6 @@
 
 class Person:
-    def __init__(self, firstName, lastName):
-        self.firstName = firstName
-        self.lastName = lastName
+    def __init__(self):
         self.b = 5
         self.a = 'hey'
 
@@ -19,6 +17,7 @@ class Person:
         if a > 0:
             a = b + 3
         else:
+            a = b - 3
             pass
         return 2 + 6 + self.b + c + a
 

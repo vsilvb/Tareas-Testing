@@ -4,7 +4,8 @@ class Person:
         return self.firstName + self.lastName
 
     def som(self):
-        print('something')
+        if True:
+            print('something')
 x = 5
 x += 1
 y = 1

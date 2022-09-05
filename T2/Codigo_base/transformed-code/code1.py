@@ -1,8 +1,6 @@
 class Person:
 
-    def __init__(self, firstName, lastName):
-        self.firstName = firstName
-        self.lastName = lastName
+    def __init__(self):
         self.b = 5
         self.a = 'hey'
 
@@ -16,16 +14,21 @@ class Person:
         e = 8
         f = d + e
         a += b
+        if a > 0:
+            a = b + 3
+        else:
+            a = b - 3
+            pass
         return 2 + 6 + self.b + c + a
 
     def doit(self):
-        literal_eval('2+2')
         if self.b > 5:
-            print('mayor a 5')
+            print('B es mayor a 5')
             if self.a == '4':
-                print('probando')
+                print('A es 4')
         elif self.b == 5:
             pass
 
     def somethig(self):
-        print('something')
+        if True:
+            print('something')
