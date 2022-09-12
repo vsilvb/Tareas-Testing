@@ -48,13 +48,24 @@ class Profile:
     
     # instance method
     def __init__(self):
-        self.functions_called=[]
-    def ins_record(self, cls, functionName, args):   
-        self.functions_called.append(functionName)
+        self.functions_called = {}
+    def ins_record(self, cls, functionName, args):
+        if functionName not in self.functions_called:
+            self.functions_called[functionName] = [args]
+        else:
+            self.functions_called[functionName].append(args)
     def printReport(self):
         print("-- executed methods --")
-        for fun in self.functions_called:
-            print(fun)
+        for functionName in self.functions_called:
+            repetido = True
+            arg_ini = self.functions_called[functionName][0]
+            for arg in self.functions_called[functionName]:
+                if arg_ini != arg:
+                    repetido = False
+            if repetido:
+                print(functionName)
+            
+
 
     
 def instrument(ast):
