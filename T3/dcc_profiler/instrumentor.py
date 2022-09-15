@@ -49,11 +49,13 @@ class Profile:
     # instance method
     def __init__(self):
         self.functions_called = {}
+        
     def ins_record(self, cls, functionName, args):
         if functionName not in self.functions_called:
             self.functions_called[functionName] = [args]
         else:
             self.functions_called[functionName].append(args)
+
     def printReport(self):
         print("-- executed methods --")
         for functionName in self.functions_called:

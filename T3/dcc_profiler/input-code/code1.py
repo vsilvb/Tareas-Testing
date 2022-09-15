@@ -9,8 +9,8 @@ def div(a,b):
 
 class TestSum(unittest.TestCase):
     def test_sum(self):
-        self.assertEqual(sum(2,3), 5, "Should be 5")
+        self.assertEqual(div(3, 2), 1.5, "Should be 5")
     def test_sum_tuple(self):
-        self.assertEqual(sum( 3, 7),10 , "Should be 10")
+        self.assertEqual(sum(3, 7),10 , "Should be 10")
 
 test = unittest.main(exit=False)
