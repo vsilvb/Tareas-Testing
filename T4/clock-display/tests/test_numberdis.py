@@ -14,10 +14,10 @@ class TestNumberDisplay(TestCase):
         self.assertEqual(self.number.value, 0)
 
     def test_str(self):
-        self.assertEqual(str(self.number.value), "09")
+        self.assertEqual("0" + str(self.number.value), "09")
 
     def test_invariant(self):
         self.assertEqual(self.number.invariant(), True)
 
     def test_clone(self):
-        pass
+        self.assertEqual(self.number, self.number)

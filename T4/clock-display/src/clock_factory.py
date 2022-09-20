@@ -8,5 +8,5 @@ class ClockFactory:
             "hh:mm:ss": ClockDisplay([24,60,60]),
             "hh:mm:ss:mmmm": ClockDisplay([24,60,60,1000])}
     
-    def create(self,pattern):
+    def create(self, pattern):
         return self.cache[pattern].clone()

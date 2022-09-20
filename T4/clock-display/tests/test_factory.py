@@ -9,5 +9,4 @@ class TestClockFactory(TestCase):
         clock = self.factory.create("hh:mm")
         for i in range(10000):
             clock.increment()
-            print(clock.str())
 
