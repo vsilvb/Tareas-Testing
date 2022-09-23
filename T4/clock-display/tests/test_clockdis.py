@@ -52,3 +52,8 @@ class TestClockDisplay(TestCase):
         self.assertEqual(self.clock.invariant(),False)
         self.clock.numbers[0].value = 25
         self.assertEqual(self.clock.invariant(),False)
+
+    def test_numbers(self):
+        for number in self.clock.numbers:
+            assert number.value 
+        assert len(self.clock.numbers) == 4
