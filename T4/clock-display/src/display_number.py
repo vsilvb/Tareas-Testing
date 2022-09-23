@@ -1,12 +1,12 @@
 
 class NumberDisplay:
-    def __init__(self, value,  limit) -> None:
+    def __init__(self, value,  limit):
         self.value = value
         self.limit = limit
     
 
     def increase(self):
-        self.value =  (self.value + self.limit + 1) % self.limit
+        self.value = (self.value + self.limit + 1) % self.limit
         return self.value == 0
 
     def reset(self):
