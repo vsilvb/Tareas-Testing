@@ -4,6 +4,8 @@ from unittest import TestCase
 class TestClockDisplay(TestCase):
     def setUp(self):
         self.clock = ClockDisplay([24,60])
+        self.assertEqual(self.clock.__init__.__annotations__['return'], None)
+        
 
     def test_increment(self):
         currentDisplay = len(self.clock.numbers) - 1
@@ -47,4 +49,6 @@ class TestClockDisplay(TestCase):
             self.assertEqual(self.clock.invariant(),True)
         
         self.clock.numbers[1].value = 60
+        self.assertEqual(self.clock.invariant(),False)
+        self.clock.numbers[0].value = 25
         self.assertEqual(self.clock.invariant(),False)

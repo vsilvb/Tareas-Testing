@@ -5,8 +5,8 @@ class TestClockFactory(TestCase):
     def setUp(self):
         self.factory = ClockFactory()
 
-    # def test_demo(self):
-    #     clock = self.factory.create("hh:mm")
-    #     for i in range(10000):
-    #         clock.increment()
+    def test_demo(self):
+        clock = self.factory.create("hh:mm")
+        for i in range(10000):
+            clock.increment()
 
