@@ -6,21 +6,32 @@ class TestClockDisplay(TestCase):
         self.clock = ClockDisplay([24,60])
         self.assertEqual(self.clock.__init__.__annotations__['return'], None)
         
-
+    
     def test_increment(self):
+        clockDisplay = 1
         currentDisplay = len(self.clock.numbers) - 1
         
         j = -1
+        a = True
         for i in range(1390):
             if i % 60 == 0:
                 j += 1
+                if i != 0:
+                    a = False
 
             if j % 24 == 0:
                 j = 0
 
             self.assertEqual(self.clock.numbers[currentDisplay].value, i % 60)
             self.assertEqual(self.clock.numbers[currentDisplay - 1].value, j)
-            self.clock.increment()
+            value = self.clock.numbers[0].value
+            
+            if not a:
+                assert clockDisplay == 0 and self.clock.numbers[clockDisplay].value ==  j
+            
+            clockDisplay = self.clock.increment()
+            
+            a = True
 
         
 
@@ -53,7 +64,4 @@ class TestClockDisplay(TestCase):
         self.clock.numbers[0].value = 25
         self.assertEqual(self.clock.invariant(),False)
 
-    def test_numbers(self):
-        for number in self.clock.numbers:
-            assert number.value 
-        assert len(self.clock.numbers) == 4
+

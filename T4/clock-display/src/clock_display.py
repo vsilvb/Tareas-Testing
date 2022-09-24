@@ -8,6 +8,8 @@ class ClockDisplay:
         currentDisplay = len(self.numbers) - 1
         while currentDisplay >= 0 and self.numbers[currentDisplay].increase():
             currentDisplay -= 1
+        
+        return currentDisplay
 
     def str(self):
         return ':'.join(map(lambda n: n.str(),self.numbers))
